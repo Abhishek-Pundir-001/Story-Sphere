@@ -3,8 +3,9 @@ import validator from 'validator';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs'
 
+
 const generateJWTtoken = (id) => {
-    return jwt.sign({ id }, process.env.JwT_SECRET, { expiresIn: '24h' })
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '24h' })
 }
 
 const register = async (req, res) => {
