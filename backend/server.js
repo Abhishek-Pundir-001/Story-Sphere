@@ -2,8 +2,10 @@ import express from 'express';
 import { connectToDb } from './config/dbConfig.js';
 import userRouter from './routes/userRoutes.js';
 import cors from 'cors'
-import 'dotenv/config.js'
+import {config} from 'dotenv'
 import storyRouter from './routes/storyRoutes.js';
+
+config()
 
 const app = express();
 const port = process.env.PORT || 4000
