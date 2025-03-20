@@ -1,15 +1,15 @@
 import storyModel from "../models/storyModel.js";
 import userModel from "../models/userModel.js";
 import mongoose from "mongoose";
-import fs from 'fs/promises'
 
 // create story
 
 const createStory = async (req, res) => {
-    const { title, content } = req.body;
+    const { title, content,userId } = req.body;
     let image_filename = `${req.file.filename}`;
 
     const story = await storyModel.create({
+        userId:userId,
         image: image_filename,
         title: title,
         content: content
@@ -33,6 +33,8 @@ const createStory = async (req, res) => {
     }
 
 }
+
+// getting stories
 
 const getAllStories = async (req, res) => {
     try {

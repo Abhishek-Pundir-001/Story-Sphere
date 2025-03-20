@@ -22,7 +22,7 @@ function StoriesList() {
         <div id='read' className='flex flex-col items-center mt-10 px-20 pt-5 pb-20 gap-1 bg-amber-50'>
             <img className='w-12 mix-blend-darken' src={book} alt="" />
             <span className='text-lg text-pink-700 font-semibold'>Read Stories</span>
-            <h1 className='text-2xl text-black font-medium w-[30%] text-center'>Take a look and Start Learning From Today</h1>
+            <h1 className='text-2xl text-black font-medium w-full md:w-[30%] text-center'>Take a look and Start Learning From Today</h1>
             <div className='flex items-center gap-6 justify-center flex-wrap mt-5'>
                 {stories?.map((item, idx) => {
                     return <StoryCard  image={`${url}/images/${item.image}`} title={item.title} content={item.content} key={item._id} id={item._id} />

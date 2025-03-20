@@ -3,9 +3,9 @@ import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
     return (
-        <div className='bg-black' id="about">
-            <div className="flex justify-between h-[26rem] px-14 pt-7 pb-24 mt-14">
-                <div className="w-1/3 self-start flex flex-col gap-2.5">
+        <div className='bg-black h-fit' id="about">
+            <div className="flex flex-col md:flex-row justify-between h-[auto] min-h-[26rem] px-14 pt-7 pb-24 mt-14 gap-10">
+                <div className="md:w-1/3 self-start flex flex-col gap-2.5">
                     <img className='w-24 rounded-full' src={st} alt="" />
                     <h2 className='text-white font-semibold'>ABOUT &nbsp;THE  &nbsp;COMPANY</h2>
                     <p className='text-[#989595]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, nihil placeat non optio excepturi praesentium hic maxime harum minima? Dolor!</p>
@@ -14,7 +14,7 @@ function Footer() {
                     </div>
 
                 </div>
-                <div className="w-1/2 self-end">
+                <div className="md:w-1/2 self-end">
                     <div className='flex justify-between'>
                         <ul className='flex flex-col gap-2'>
                             <li className='text-white text-lg font-medium'>Our Services</li>

@@ -4,6 +4,7 @@ import userRouter from './routes/userRoutes.js';
 import cors from 'cors'
 import {config} from 'dotenv'
 import storyRouter from './routes/storyRoutes.js';
+import adminRouter from './routes/adminRoutes.js';
 
 config()
 
@@ -19,6 +20,7 @@ app.use('/check',(req,res)=>{
 })
 app.use('/api/user',userRouter);
 app.use('/api/story',storyRouter)
+app.use('/api/admin',adminRouter)
 
 
 app.listen(port,async()=>{

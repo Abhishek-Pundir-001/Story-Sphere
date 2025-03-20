@@ -2,8 +2,12 @@ import title from '../../assets/title1.png'
 import read from '../../assets/read.jpg'
 import write from '../../assets/write.jpg'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { StoreContext } from '../../Context/StoreContext'
+import toast from 'react-hot-toast'
 
 function CreateStory() {
+    const { token } = useContext(StoreContext) 
     return (
         <div className="flex flex-col gap-5 items-center py-8" id="create">
             <h1 className="text-[#401b41] text-3xl font-semibold">Get Started</h1>
@@ -24,7 +28,7 @@ function CreateStory() {
                     <p className='w-[75%] text-center'>ubiquititious models rather than parallel initiatives seamlessly reinvent success.</p>
                 </div>
             </div>
-            <Link to='/createillus'><button className='bg-green-700 hover:scale-105 cursor-pointer text-white px-10 py-3 rounded-sm'>Try it now</button></Link>
+            <Link to={token ? '/createillus' : '/'}><button onClick={()=>{!token ? toast.error("please login"):''}} className='bg-green-700 hover:scale-105 cursor-pointer text-white px-10 py-3 rounded-sm'>Try it now</button></Link>
         </div>
 
     )

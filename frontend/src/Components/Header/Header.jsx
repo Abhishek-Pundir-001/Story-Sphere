@@ -22,12 +22,12 @@ function Header({ setCurrState }) {
         navigate("/")
     }
     return (
-        <div className="h-[45vw] header px-20 p-8">
+        <div className="h-[60vh] lg:h-[45vw] header md:px-20 md:p-8 p-4">
             <nav className='flex justify-between items-center'>
                 <div className="nav-right">
                     <img className='h-12 rounded-full' src={logo2} alt="" />
                 </div>
-                <ul className='flex gap-5 text-white'>
+                <ul className='md:flex gap-5 text-white hidden'>
                     <Link to='/' className='cursor-pointer hover:text-amber-300'>Home</Link>
                     <a href='#about' className='cursor-pointer hover:text-amber-300'>About us</a>
                     <a href='#create' className='cursor-pointer hover:text-amber-300'>Write</a>
@@ -49,23 +49,23 @@ function Header({ setCurrState }) {
                     </div>}
                 </div>
             </nav>
-            <header className='mt-10'>
-                <div className='flex justify-around items-center'>
-                    <div className='w-1/2 flex flex-col gap-2.5 items-start relative'>
+            <header className='mt-16 md:mt-20'>
+                <div className='flex flex-col md:flex-row justify-between items-center'>
+                    <div className='w-full md:w-1/2 flex flex-row md:flex-col gap-2.5 items-start relative'>
                         <img className='h-8 rounded-full absolute top-[-30px] left-0 opacity-50' src={teddy} alt="" />
                         <h1 className='text-4xl font-semibold w-1/2 text-amber-50'>Get better at writng</h1>
-                        <p className='text-white font-medium leading-6 text-sm w-3/4'>Helpping young writers make cool stories with awesome pictures.Storybird's art-inspired writing makes learning fun!</p>
+                        <p className='text-white font-medium leading-6 text-sm w-3/4 hidden md:block'>Helpping young writers make cool stories with awesome pictures.Storybird's art-inspired writing makes learning fun!</p>
                         <button className='px-10 py-2 text-white rounded-lg bg-orange-600'>Join now</button>
                     </div>
-                    <div className='flex flex-wrap w-1/2 gap-5 items-center'>
+                    <div className='flex flex-wrap w-1/2 gap-5 md:items-center'>
                         <div className='w-full flex justify-between'>
-                            <img className='w-1/2 rounded-lg mix-blend-lighten' src={img4} alt="" />
-                            <img className='w-1/3 rounde-lg  mix-blend-darken opacity-50' src={teddy} alt="" />
+                            <img className='w-full md:w-1/2 rounded-lg mix-blend-lighten' src={img4} alt="" />
+                            <img className='w-1/3 rounde-lg mix-blend-darken opacity-50 hidden md:block' src={teddy} alt="" />
                         </div>
-                        <div className='w-full flex justify-between'>
+                        <div className='w-full md:flex justify-between hidden'>
 
                             <img className='w-1/3 rounded-lg mix-blend-darken opacity-50 -rotate-45' src={teddy} alt="" />
-                            <img className='w-1/2 rounded-lg  mix-blend-lighten' src={img4} alt="" />
+                            <img className='w-1/2 rounded-lg mix-blend-lighten' src={img4} alt="" />
                         </div>
 
                     </div>

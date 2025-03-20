@@ -10,7 +10,7 @@ const generateJWTtoken = (id) => {
 
 const register = async (req, res) => {
     try {
-        const { name, email, password } = req.body;
+        const { name, email, password,role } = req.body;
         if (!name || !email || !password) {
             return res.json({
                 success: false,
@@ -40,7 +40,7 @@ const register = async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hashSync(password, 10)
-        const newUser = await userModel.create({ name, email, password: hashedPassword });
+        const newUser = await userModel.create({ name, email, password: hashedPassword,role:role });
 
         const user = await newUser.save();
 
