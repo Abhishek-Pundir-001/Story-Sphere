@@ -6,7 +6,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
     const [token,setToken] = useState(localStorage.getItem("token" || ""))
-    const url = 'http://localhost:4000';
+    const url = 'https://story-sphere-backend.onrender.com';
    
 
     const contextValue = {
